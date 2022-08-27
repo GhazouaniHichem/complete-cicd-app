@@ -1,9 +1,13 @@
 version: '3'
 services:
   my-app:
-    image: ghazouanihm/cicd-app:1.0
+    image: ghazouanihm/cicd-app:1.1
     ports:
       - 3000:3000
+    environment:
+      - MONGODB_ADMINUSERNAME=admin
+      - MONGODB_ADMINPASSWORD=password
+      - MONGODB_SERVER_URL=mongodb
   mongodb:
     image: mongo
     ports:
@@ -27,3 +31,4 @@ services:
 volumes:
   mongo-data:
     driver: local
+
