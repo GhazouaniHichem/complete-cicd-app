@@ -9,6 +9,13 @@ def buildImage() {
 
 def deployApp() {
     echo 'deploying the application...'
+    sh 'ssh -i ~/.ssh/id_rsa ec2-user@13.38.63.231'
+    sh 'mkdir myapp-folder'
+    sh 'cd myapp-folder'
+    sh 'git clone https://github.com/GhazouaniHichem/complete-cicd-app.git'
+    sh 'cd complete-cicd-app'
+    sh 'docker-compose up -d'
+
 }
 
 
