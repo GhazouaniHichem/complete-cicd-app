@@ -6,7 +6,7 @@ pipeline {
         nodejs 'node-18.8'
     }
     stages {
-        stage {
+        stage("init") {
             steps {
                 script {
                     gv = load "script.groovy"
