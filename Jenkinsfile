@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo "building the application..."
-                    sh 'npm install /app/package.json'
+                    sh 'npm install /app'
                     echo 'npm install process success...'
                 }
             }
