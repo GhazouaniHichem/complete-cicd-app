@@ -24,7 +24,7 @@ pipeline {
                     }
  */                 
                     sh 'docker build -t ghazouanihm/cicd-app:1.1 .'
-                    sh 'docker push ghazouanihm/jma-app:1.1'
+                    sh 'docker push ghazouanihm/cicd-app:1.1'
                 }
             }
         }
