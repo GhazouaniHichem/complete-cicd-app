@@ -9,7 +9,7 @@ def buildImage() {
 
 def deployApp() {
     echo 'deploying the application...'
-    sh 'ssh -i ~/web-server-key-pair.pem ec2-user@13.38.63.231 -yes "mkdir myapp-folder'
+    sh 'ssh -i ~/web-server-key-pair.pem ec2-user@13.38.63.231 -yes "mkdir myapp-folder"'
  //   sh 'mkdir myapp-folder'
  //   sh 'cd myapp-folder'
  //   sh 'git clone https://github.com/GhazouaniHichem/complete-cicd-app.git'
