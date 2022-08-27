@@ -1,14 +1,26 @@
+def gv
+
 pipeline {
     agent any
     tools {
         nodejs 'node-18.8'
     }
     stages {
+        stage {
+            steps {
+                script {
+                    gv = load "script.groovy"
+                }
+            }
+        }
         stage("build jar") {
             steps {
                 script {
                     echo "building the application..."
-                    echo 'npm install process...'
+                    sh 'cd app'
+                    sh 'npm install'
+                    sh 'cd ..'
+                    echo 'npm install process success...'
                 }
             }
         }
