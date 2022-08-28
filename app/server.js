@@ -60,7 +60,9 @@ app.get('/get-profile', function (req, res) {
   // Connect to the db
   MongoClient.connect(mongoUrl, mongoClientOptions, function (err, client) {
     if (err) throw err;
-
+    
+    console.log("connected to mongodb !");
+    
     let db = client.db(databaseName);
 
     let myquery = { userid: 1 };
