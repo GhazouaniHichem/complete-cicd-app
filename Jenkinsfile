@@ -6,7 +6,7 @@ pipeline {
     
     
     tools {
-        nodejs 'nodejs19-8-1'
+        nodejs
     }
     
     
