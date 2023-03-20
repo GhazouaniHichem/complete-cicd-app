@@ -7,7 +7,8 @@ services:
     environment:
       - MONGODB_ADMINUSERNAME=admin
       - MONGODB_ADMINPASSWORD=password
-      - MONGODB_SERVER_URL=mongodb
+#      - MONGODB_SERVER_URL=mongodb
+      - MONGODB_SERVER_URL=52.47.177.29
   mongodb:
     image: mongo
     ports:
@@ -25,7 +26,7 @@ services:
     environment:
      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
-     - ME_CONFIG_MONGODB_SERVER=mongodb
+     - ME_CONFIG_MONGODB_SERVER=52.47.177.29 #mongodb
     depends_on:
      - "mongodb"
 volumes:
