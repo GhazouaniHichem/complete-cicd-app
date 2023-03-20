@@ -5,11 +5,6 @@ pipeline {
     agent any
     
     
-    tools {
-        nodejs 'nodejs19-8-1'
-    }
-    
-    
     stages {
     
         stage("init") {
