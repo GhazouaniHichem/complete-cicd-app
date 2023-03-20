@@ -9,7 +9,7 @@ def buildImage() {
 
 def deployApp() {
     echo 'deploying the application....'
-    sh 'ssh -i ~/jenk_master_key.pem -o "StrictHostKeyChecking no" ec2-user@52.47.177.29 -y' 
+    sh 'ssh -i .ssh/jenk_master_key.pem -o "StrictHostKeyChecking no" ec2-user@52.47.177.29 -y' 
     //"git clone https://github.com/GhazouaniHichem/complete-cicd-app.git && cd complete-cicd-app && docker-compose up -d"'
 //    sh 'git clone https://github.com/GhazouaniHichem/complete-cicd-app.git'
 //    sh 'cd complete-cicd-app'
