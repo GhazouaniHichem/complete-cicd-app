@@ -3,7 +3,7 @@ def buildImage() {
     withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
         sh 'docker build -t ghazouanihm/cicd-app:1.1 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
-        sh 'sudo docker push ghazouanihm/cicd-app:1.1'
+        sh 'docker push ghazouanihm/cicd-app:1.1'
         }
 }
 
